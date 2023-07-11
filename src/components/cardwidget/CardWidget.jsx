@@ -1,4 +1,4 @@
-import React from "react";
+
 import './cardwidget.css';
 import { FaShoppingCart } from "react-icons/fa";
 
