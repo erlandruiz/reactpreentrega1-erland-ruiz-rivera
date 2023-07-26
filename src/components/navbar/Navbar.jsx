@@ -8,7 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 //Agregando el CartWidget
-import { CardWidget } from "../cardwidget/CardWidget";
+import { CardWidget } from "../Cardwidget/CardWidget";
 
 CardWidget
 
