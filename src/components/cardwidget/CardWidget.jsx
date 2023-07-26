@@ -1,5 +1,5 @@
 
-import './Cardwidget.css';
+import './CardWidget.css';
 import { FaShoppingCart } from "react-icons/fa";
 
 export const CardWidget = () => {
