@@ -10,35 +10,49 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 //Agregando el CartWidget
 import { CardWidget } from "../cardwidget/CardWidget";
 
+CardWidget
+
 import "./navbar.css";
+import { Link, Outlet } from "react-router-dom";
+import { NavLink } from "react-bootstrap";
+
 
 export const NavbarBar = () => {
   return (
-    <div>
-      <Navbar expand="lg" className="bg-body-tertiary">
+    <>
+    <header>
+    <Navbar expand="lg" className="bg-body-tertiary">
         <Container className="navbar-container">
-          <Navbar.Brand href="#home" className="navbar-brand-titulo">Erland EPP</Navbar.Brand>
+         
+
+          <Navbar.Brand as={Link} to={"/"} className="navbar-brand-titulo">Erland EPP</Navbar.Brand>
+          
+
+          
+          
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home">Inicio</Nav.Link>
-              <Nav.Link href="#about">Nosotros</Nav.Link>
+              <Nav.Link as={Link} to ="/">Todos Los Productos</Nav.Link>
+              <Nav.Link as={Link} to={"nosotros"}>Nosotros</Nav.Link>
+              <Nav.Link as={Link} to={"conocenos"}>Conocenos</Nav.Link>
+              <Nav.Link as={Link} to={"contactanos"}>Contáctanos</Nav.Link>
 
-              <Nav.Link href="#contact">Contactanos</Nav.Link>
+          
 
               <NavDropdown title="Products" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
-                  Proteccion auditiva
+                <NavDropdown.Item as={Link} to={"category/auditiva"}>
+                  Proteccion Auditiva
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Proteccion de cabeza
+                <NavDropdown.Item as={Link} to={"category/cabeza"}>
+                  Proteccion de Cabeza
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Protección de manos
+                <NavDropdown.Item as={Link} to={"category/manos"}>
+                  Protección de Manos
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Ofertas</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to={"ofertas/true"}>Ofertas</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -46,6 +60,11 @@ export const NavbarBar = () => {
           <CardWidget />
         </Container>
       </Navbar>
-    </div>
+
+    </header>
+      
+      <Outlet/>
+      <footer>FOOTER</footer>
+    </>
   );
 };

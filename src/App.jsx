@@ -1,30 +1,49 @@
-import { useState } from 'react'
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
-import {  NavbarBar } from './components/navbar/Navbar'
-import { ItemListContainer } from './components/itemlistcontainer/ItemListContainer'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss'
+import {  NavbarBar } from './components'
+
+import { Home } from './pages/Home'
+import { Details } from './pages/Details'
+import { Category } from './pages/Category';
+import { Nosotros } from './pages/Nosotros';
+import { Conocenos } from './pages/Conocenos';
+import { Contactanos } from './pages/Contactanos';
+import { Ofertas } from './pages/Ofertas';
+
+
+const routes = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element = {<NavbarBar />}>
+      <Route path='/' element={<Home />}/>
+      <Route path='/item/:id'element={<Details/>}/>
+      <Route path='/category/:id' element={<Category/>}/>
+      <Route path='/ofertas/:id' element={<Ofertas/>}/>
+      <Route path='/nosotros' element={<Nosotros/>}/>
+      <Route path='/conocenos' element={<Conocenos/>}/>
+      <Route path='/contactanos' element={<Contactanos/>}/>
+
+    </Route>
+
+   
+  )
+)
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <>
+  
     <div className='app'>
 
-      {/* Se agrega en navbar el cartwidget */}
-      <NavbarBar/>
+      <RouterProvider router={routes}/>
 
-    {/* Enviamos el saludo */}
-      <ItemListContainer greeting={'Saludos de parte del equipo de protección personal'}/>
-      
-      
       
     </div>
+  
     
-      
-    </>
   )
 }
 
