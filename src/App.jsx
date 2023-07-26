@@ -3,7 +3,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
-import {  NavbarBar } from './components'
+
 
 import { Home } from './pages/Home'
 import { Details } from './pages/Details'
@@ -12,6 +12,7 @@ import { Nosotros } from './pages/Nosotros';
 import { Conocenos } from './pages/Conocenos';
 import { Contactanos } from './pages/Contactanos';
 import { Ofertas } from './pages/Ofertas';
+import { NavbarBar } from './components/Navbar/NavbarBar';
 
 
 const routes = createBrowserRouter(

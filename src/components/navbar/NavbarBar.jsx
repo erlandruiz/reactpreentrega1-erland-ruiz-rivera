@@ -12,9 +12,9 @@ import { CardWidget } from "../Cardwidget/CardWidget";
 
 CardWidget
 
-import "./navbar.css";
+import "./Navbar.css";
 import { Link, Outlet } from "react-router-dom";
-import { NavLink } from "react-bootstrap";
+
 
 
 export const NavbarBar = () => {
