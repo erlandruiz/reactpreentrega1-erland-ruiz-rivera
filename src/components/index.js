@@ -1,4 +1,4 @@
-export { NavbarBar } from "./Navbar/Navbar";
+export { NavbarBar } from "./Navbar/NavbarBar";
 
 
 export { Item } from "./Item/Item";

@@ -64,7 +64,7 @@ export const NavbarBar = () => {
     </header>
       
       <Outlet/>
-      <footer>FOOTER</footer>
+      
     </>
   );
 };

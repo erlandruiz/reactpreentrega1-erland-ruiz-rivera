@@ -29,7 +29,7 @@ export const Ofertas = () => {
             <h5>{isLoading ? 'Cargando...': 'Listo'}</h5>
             <ItemListContainer products={products}/>
         </div>
-        Category
+        
     </div>
   )
 }
