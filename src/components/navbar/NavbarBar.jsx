@@ -57,7 +57,7 @@ export const NavbarBar = () => {
             </Nav>
           </Navbar.Collapse>
 
-          <CardWidget />
+          <CardWidget/>
         </Container>
       </Navbar>
 
